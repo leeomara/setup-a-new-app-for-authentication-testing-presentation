@@ -41,7 +41,15 @@ It will not cover:
 
 ---
 
-# Identity status (nickel tour)
+# A new online service to use an online service
+
+If you are building an online service and want to use the identity online service, you can now use a new online service to request that your online service get setup with the identity online service.
+
+Easy, right? But first, some context.
+
+---
+
+# Identity project status (nickel tour)
 
 eServices will be the home to the Yukon identity service, a government-backed digital identity. Part of this is a single account to log in to access gov't services. Works for staff logins too.
 
@@ -53,6 +61,8 @@ As part of the delay we're not yet publicly using the brand name.
 
 We have a modest number of services currently using this system, and more starting soon.
 
+Our standard at YG is to use this identity service as the clearinghouse for all authentication.  We're aiming for a single consistent and unified identity integration story for both YG staff and other (contractors, citizens, etc). 
+
 ---
 
 # What does this mean to me?
@@ -63,9 +73,10 @@ No more managing user password, password resets, etc.
 
 Fewer accounts and passwords for your users.
 
-Authorization still needs to happen at the application layer.
+Not included:
 
-This is not magic. Applications likely need to do some onboarding. Maybe need to do account matching.
+- Authorization. Authorization still needs to happen at the application layer.
+- Magic. Applications likely need to do some onboarding. Possibly account matching.
 
 ---
 
@@ -75,22 +86,35 @@ We have an identity service provider who can support citizen and staff logins. T
 
 We have a single integration point for applications that need authentication. Citizens authenticate using email and password, staff authenticate via Azure AD.
 
-Uses open/common standards. Open ID Connect (OIDC), OAuth2, SAML2.
+Uses open/common standards: Open ID Connect (OIDC), OAuth2, SAML2.
 
 We have 3 environments: dev, UAT and prod.
-      
+
+Sample code, reference implementations and templates.
+
 ---
-      
-## How, who and when?
-      
+
+# How, who and when?
+
 Who is this for, how do you get access, and when should that happen?
 
 ---
+
 ## How, who and when?
-      
+
+# Who is this for?
+
+This is for staff or contractors who are working on applications (internal or public-facing) that require authentication.
+
+It is intended for someone with technical knowledge of how authentication will be handled, but the form is very simple, so hopefully anyone can use it.
+
+---
+
+## How, who and when?
+
 # How to get access
 
-We created an online service to formally request acess to the test tenant.
+We created an online service to formally request access to the test tenant.
 
 It's called: Setup a new app for authentication testing
 
@@ -101,21 +125,12 @@ https://service.yukon.ca/forms/en/setup_new_app_for_authentication_testing
       
 ## How, who and when?
 
-# Who is this for?
-
-This is for staff or contractors who are working on applications that require authentication.
-
-It is intended for someone with technocal knowledge of how authentication will be handled, but the form is very simple, so anyone can use it.
-
----
-      
-## How, who and when?
-
 # When should we do this?
 
-Earlier is better, but we've had some projects use alternative authentication systems during developmenta and then setup with Yukon SSO only for final integration testing.
+Earlier is better, though we've had some projects use alternative authentication systems during development and then setup with Yukon SSO only for final integration testing.
 
 ---
+
 # I have questions
       
 Who to contact for more information?
