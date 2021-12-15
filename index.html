@@ -21,19 +21,95 @@
 
 class: center, middle
 
-# Title
+# Setup a new app for authentication testing
+      
+---
+      
+# What is this presentation?
+
+It will cover:
+- a new online service for using an online service
+- what service? Identity
+- so what?
+- what is it?
+- how to get it?
+- I have questions
+
+It will not cover:
+- in depth overview of identity
+- technical deep dive on implementation
 
 ---
 
-# Agenda
+# Identity status (nickel tour)
 
-1. Introduction
-2. Deep-dive
-3. ...
+eServices will be the home to the Yukon identity service, a government-backed digital identity. Part of this is a single account to log in to access gov't services. Works for staff logins too.
+
+We've done a public procurement and technology proof-of-concepts, branding and comms work.
+
+Waiting for regulations to enable a more complete identity service. In the meantime we're supporting Single Sign On. 
+
+As part of the delay we're not yet publicly using the brand name.
+
+We have a modest number of services currently using this system, and more starting soon.
 
 ---
 
-# Introduction
+# What does this mean to me?
+
+Able to support staff authentication and/or contractor or public authenticating without needing everyone to be in AD.
+
+No more managing user password, password resets, etc. 
+
+Fewer accounts and passwords for your users.
+
+Authorization still needs to happen at the application layer.
+
+This is not magic. Applications likely need to do some onboarding. Maybe need to do account matching.
+
+---
+
+# What we have
+
+We have an identity service provider who can support citizen and staff logins. The vendor is Auth0.
+
+We have a single integration point for applications that need authentication. Citizens authenticate using email and password, staff authenticate via Azure AD.
+
+Uses open/common standards. Open ID Connect (OIDC), OAuth2, SAML2.
+
+We have 3 environments: dev, UAT and prod.
+
+--- 
+
+# How to get access
+
+We created an online service to formally request acess to the test tenant.
+
+It's called: Setup a new app for authentication testing
+
+It is available at:
+https://service.yukon.ca/forms/en/setup_new_app_for_authentication_testing
+
+
+## Who is this for?
+
+This is for staff or contractors who are working on applications that require authentication.
+
+It is intended for someone with technocal knowledge of how authentication will be handled, but the form is very simple, so anyone can use it.
+
+## When should we do this?
+
+Earlier is better, but we've had some projects use alternative authentication systems during developmenta and then setup with Yukon SSO only for final integration testing.
+
+---
+
+# Who to contact for more information?
+
+- Lee O'Mara - eSevices web architect
+- Ryan Agar - Enterprise architect
+- Greg Newby - Identity program manager
+
+
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js">
